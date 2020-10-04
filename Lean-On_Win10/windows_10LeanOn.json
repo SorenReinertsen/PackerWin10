@@ -57,7 +57,7 @@
     {
       "scripts": [
         "./scripts/set-powerplan.ps1",
-        "./scripts/docker/disable-windows-defender.ps1",
+        "./scripts/disable-windows-defender.ps1",
 		"./Scripts/HalloWorld.ps1"
       ],
       "type": "powershell"
