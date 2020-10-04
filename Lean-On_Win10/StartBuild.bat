@@ -1,0 +1,2 @@
+powershell -f build_windows_10_virtualboxLeanOn.ps1
+pause
