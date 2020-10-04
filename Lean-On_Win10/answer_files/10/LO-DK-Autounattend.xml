@@ -83,8 +83,8 @@
             </DiskConfiguration>
             <UserData>
                 <AcceptEula>true</AcceptEula>
-                <FullName>Vagrant</FullName>
-                <Organization>Vagrant</Organization>
+                <FullName>Lean-On</FullName>
+                <Organization>Lean-On LAAP</Organization>
 
                 <!--
                     NOTE: If you are re-configuring this for use of a retail key
@@ -125,11 +125,11 @@
             <SetupUILanguage>
                 <UILanguage>en-US</UILanguage>
             </SetupUILanguage>
-            <InputLocale>en-US</InputLocale>
+            <InputLocale>0406:00000406</InputLocale>
             <SystemLocale>en-US</SystemLocale>
             <UILanguage>en-US</UILanguage>
             <UILanguageFallback>en-US</UILanguageFallback>
-            <UserLocale>en-US</UserLocale>
+            <UserLocale>da-DK</UserLocale>
         </component>
     </settings>
     <settings pass="offlineServicing">
@@ -253,7 +253,7 @@
                     <Order>14</Order>
                     <Description>Enable AutoLogon</Description>
                 </SynchronousCommand>
-                <!-- WITHOUT WINDOWS UPDATES -->
+        <!-- WITHOUT WINDOWS UPDATES -->
                 
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\enable-winrm.ps1</CommandLine>
@@ -264,7 +264,7 @@
 		<!-- END WITHOUT WINDOWS UPDATES -->
                 <!-- WITH WINDOWS UPDATES -->
                 <!--
-		<SynchronousCommand wcm:action="add">
+				<SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c a:\microsoft-updates.bat</CommandLine>
                     <Order>98</Order>
                     <Description>Enable Microsoft Updates</Description>
@@ -294,7 +294,7 @@
             </OEMInformation>
             <!-- Rename computer here. -->
             <ComputerName>vagrant-10</ComputerName>
-            <TimeZone>Pacific Standard Time</TimeZone>
+            <TimeZone>Romance Standard Time</TimeZone>
             <RegisteredOwner/>
         </component>
         <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Security-SPP-UX" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">

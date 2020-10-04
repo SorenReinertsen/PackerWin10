@@ -32,8 +32,8 @@ mkdir C:\Windows\SoftwareDistribution\Download
 net start wuauserv
 
 if "%PACKER_BUILDER_TYPE%" neq "hyperv-iso" (
-	cmd /c C:\Windows\Temp\ultradefrag-portable-6.1.0.amd64\udefrag.exe --optimize --repeat C:
+Rem	cmd /c C:\Windows\Temp\ultradefrag-portable-6.1.0.amd64\udefrag.exe --optimize --repeat C:
 
-	cmd /c %SystemRoot%\System32\reg.exe ADD HKCU\Software\Sysinternals\SDelete /v EulaAccepted /t REG_DWORD /d 1 /f
-	cmd /c C:\Windows\Temp\sdelete.exe -q -z C:
+Rem	cmd /c %SystemRoot%\System32\reg.exe ADD HKCU\Software\Sysinternals\SDelete /v EulaAccepted /t REG_DWORD /d 1 /f
+Rem	cmd /c C:\Windows\Temp\sdelete.exe -q -z C:
 )
