@@ -1,0 +1,2 @@
+Import-Module 'C:\Program Files\Microsoft Virtual Machine Converter\MvmcCmdlet.psd1'
+ConvertTo-MvmcVirtualHardDisk -SourceLiteralPath C:\VMDK2VHDX\output-virtualbox-iso\Lo4-windows_10-disk001.vmdk -VhdType DynamicHardDisk -VhdFormat vhdx -destination C:\VMDK2VHDX

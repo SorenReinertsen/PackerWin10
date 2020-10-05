@@ -1,0 +1,1 @@
+vboxmanage unregistervm "Lo4-windows_10" --delete 
