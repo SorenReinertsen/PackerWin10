@@ -15,9 +15,7 @@
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-		"./Scripts/Reine.bat",
-		"./Scripts/HalloWorld.ps1"
+        "./scripts/PVS_TargetInstall.bat"
       ],
       "guest_additions_mode": "disable",
       "guest_os_type": "Windows10_64",
@@ -34,19 +32,9 @@
     }
   ],
   "provisioners": [
-    {
-      "execute_command": "{{ .Vars }} cmd /c \"{{ .Path }}\"",
-      "remote_path": "/tmp/script.bat",
+     {
       "scripts": [
-        "./scripts/vm-guest-tools.bat",
-        "./scripts/enable-rdp.bat"
-      ],
-      "type": "windows-shell"
-    },
-    {
-      "scripts": [
-        "./scripts/debloat-windows.ps1",
-		"./Scripts/HalloWorld.ps1" 
+        "./scripts/debloat-windows.ps1"
       ],
       "type": "powershell"
     },
@@ -57,11 +45,23 @@
     {
       "scripts": [
         "./scripts/set-powerplan.ps1",
-        "./scripts/disable-windows-defender.ps1",
-		"./Scripts/HalloWorld.ps1"
+        "./scripts/disable-windows-defender.ps1"
       ],
       "type": "powershell"
     },
+	{
+	  "execute_command": "{{ .Vars }} cmd /c \"{{ .Path }}\"",
+	  "remote_path": "/tmp/script.bat",
+	  "scripts": [
+		"./Scripts/CreateTmp.bat"
+	  ],
+	  "type": "windows-shell"
+	},
+	{
+	  "type": "file",
+	  "source": "./scripts/PVS_Device_x64.exe",
+	  "destination": "c:\\LOtmp\\PVS_Device_x64.exe"
+	},
     {
       "execute_command": "{{ .Vars }} cmd /c \"{{ .Path }}\"",
       "remote_path": "/tmp/script.bat",
@@ -71,8 +71,8 @@
         "./scripts/set-winrm-automatic.bat",
         "./scripts/uac-enable.bat",
         "./scripts/dis-updates.bat",
-        "./scripts/compact.bat",
-		"./Scripts/Reine.bat"
+		"./scripts/PVS_TargetInstall.bat",
+        "./scripts/compact.bat"
       ],
       "type": "windows-shell"
     }

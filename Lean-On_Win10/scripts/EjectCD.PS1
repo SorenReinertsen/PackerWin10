@@ -1,0 +1,1 @@
+Dismount-DiskImage -DevicePath \\.\CDROM1
