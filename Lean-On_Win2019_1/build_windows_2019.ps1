@@ -1,3 +1,4 @@
+Set-ExecutionPolicy Bypass -Scope Process -Force
 if (Test-Path ./output-virtualbox-iso) {
   Remove-Item -Recurse -Force ./output-virtualbox-iso
 }
